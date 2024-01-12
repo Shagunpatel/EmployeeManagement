@@ -1,6 +1,29 @@
 {% extends "employee_management/base.html" %}
 {% block 'body_block' %}
 
+<div class="container mt-5">
+    <div class="card mx-auto" style="width:25rem;">
+        <div class="card-body">
+            <h5 class="card-title">Employee Details</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Employee Id:</strong> {{ emp_detail.Employee_Id }}</li>
+                <li class="list-group-item"><strong>First Name:</strong> {{ emp_detail.First_Name }}</li>
+                <li class="list-group-item"><strong>Last Name:</strong> {{ emp_detail.Last_Name }}</li>
+                <li class="list-group-item"><strong>Salary:</strong> {{ emp_detail.Salary }}</li>
+                <li class="list-group-item"><strong>Department:</strong> {{ emp_detail.Department }}</li>
+                <li class="list-group-item"><strong>Position:</strong> {{ emp_detail.Position }}</li>
+                <li class="list-group-item"><strong>Location:</strong> {{ emp_detail.Location }}</li>
+                <li class="list-group-item"><strong>Phone Number:</strong> {{ emp_detail.Phone_No }}</li>
+                <li class="list-group-item"><strong>Date Of Joining:</strong> {{ emp_detail.Date_Of_Joining }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock 'body_block' %}
+{% comment %} {% extends "employee_management/base.html" %}
+{% block 'body_block' %}
+
 <div class="container" style="border: 1px solid black">
     <div class="row">
         <div class="col-md-6 mx-auto text-center">
@@ -20,4 +43,4 @@
 </div>
 
 
-{% endblock 'body_block' %}
+{% endblock 'body_block' %} {% endcomment %}
