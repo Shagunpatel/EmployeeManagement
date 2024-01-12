@@ -1,0 +1,23 @@
+{% extends "employee_management/base.html" %}
+{% block 'body_block' %}
+
+<div class="container" style="border: 1px solid black">
+    <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+            <h3>Employee Id:{{emp_detail.Employee_Id}}</h3>
+            <h3>First Name: {{emp_detail.First_Name}}</h3>
+            <h3>Last Name: {{emp_detail.Last_Name}}</h3>
+            <h3>Salary: {{emp_detail.Salary}}</h3>
+            <h3>Department: {{emp_detail.Department}}</h3>
+            <h3>Position: {{emp_detail.Position}}</h3>
+            <h3>Location: {{emp_detail.Location}}</h3>
+            <h3>Phone Number: {{emp_detail.Phone_No}}</h3>
+            <h3>Date Of Joining: {{emp_detail.Date_Of_Joining}}</h3>
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock 'body_block' %}

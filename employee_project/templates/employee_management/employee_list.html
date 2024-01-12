@@ -1,0 +1,37 @@
+{% extends "employee_management/base.html" %}
+
+{% block 'body_block' %}
+            <div class="container pt-5">
+                <table  style="border-collapse: collapse; width: 100%;text-align:center" border=1>
+                  <thead>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    {% comment %} <th>Last Name</th>
+                     {% endcomment %}
+                    <th>Details</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                  </thead>
+                  
+                  
+                    {% for i in emp_list %}
+                    <tr>
+                        <td>{{i.Employee_Id}}</td>
+                        <td>{{i.First_Name}}</td>
+                        <td><a href="{% url 'emp:detail' pk=i.Employee_Id %}" class="btn btn-primary">Details</a></td>
+                        <td><a href="{% url 'emp:delete' pk=i.Employee_Id %}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="{% url 'emp:update' pk=i.Employee_Id %}" class="btn btn-warning">Update</a></td>
+                        {% comment %} <td>{{i.Last_Name}}</td>
+                        <td>{{i.Salary}}</td>
+                        <td>{{i.Department}}</td>
+                        <td>{{i.Position}}</td> 
+                        <td>{{i.Location}}</td>
+                        <td>{{i.Phone_No}}</td>
+                        <td>{{i.Date_Of_Joining}}</td> {% endcomment %}
+                    </tr>
+                    {% endfor %}
+                  
+                </table>
+            </div>
+
+{% endblock 'body_block' %}

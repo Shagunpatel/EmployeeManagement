@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  
+</head>
+
+<body style="background-color: rgba(147, 202, 184, 0.979);">
+  <nav class="navbar navbar-expand-sm navbar-light fxed-top" id="navbar" style="background-color:rgba(0, 0, 0, 0.089);">
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/home_logo.png' %}" width="200" height="40" class="d-inline-block align-top" alt="">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+  {% block 'body_block' %}
+  <div class='container'align="center">
+    <h1>Employee Management System</h1><br>
+    <h2>Select from below:</h2><br>
+    <table align=center >
+        <tr>
+            <td><a href="{% url 'emp:add' %}" class="btn btn-primary">Add Employee</a></td>
+            <td><a href="{% url 'emp:view' %}" class="btn btn-success">View Employee</a></td>
+            
+        </tr>
+
+        <tr>
+            
+        </tr>
+    </table>
+
+
+  </div>
+        
+  {% endblock 'body_block' %}
+  <script>
+    
+      let handlescroll=()=>{
+            document.getElementById("navbar").style.backgroundColor="rgba(60, 82, 75, 0.979)";
+        }
+        window.addEventListener("scroll",handlescroll)
+
+  </script>
+</body>
+
+</html>
