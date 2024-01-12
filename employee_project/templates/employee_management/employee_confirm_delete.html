@@ -1,17 +1,12 @@
 {% extends "employee_management/base.html" %}
 {% block 'body_block' %}
-    {% if "del_emp" %}
-        <h1 style="color:red;">Delete {{del_emp.First_Name}}  {{del_emp.Last_Name}} ?</h1>
-        <table>
-            <tr>
-                <form action="" method="post">
-                    {% csrf_token %}
-                <td><input type="submit" value="Delete"></td>
-                <td><a href="{% url 'emp:view' %}"><input type="submit" value="Cancel"></a></td>
-                </form>
-            </tr>
-        </table>
-    {% endif %}
+    <h1 style="color:red;">Delete {{del_emp.First_Name}}  {{del_emp.Last_Name}} ?</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+            <a href="{% url 'emp:view' %}" class="btn btn-primary">Cancel</a>
+
 
 
 {% endblock 'body_block' %}
