@@ -9,12 +9,24 @@
                 <li class="list-group-item"><strong>Employee Id:</strong> {{ emp_detail.Employee_Id }}</li>
                 <li class="list-group-item"><strong>First Name:</strong> {{ emp_detail.First_Name }}</li>
                 <li class="list-group-item"><strong>Last Name:</strong> {{ emp_detail.Last_Name }}</li>
+                <li class="list-group-item"><strong>Gender:</strong> {{ emp_detail.Gender }}</li>
                 <li class="list-group-item"><strong>Salary:</strong> {{ emp_detail.Salary }}</li>
                 <li class="list-group-item"><strong>Department:</strong> {{ emp_detail.Department }}</li>
                 <li class="list-group-item"><strong>Position:</strong> {{ emp_detail.Position }}</li>
                 <li class="list-group-item"><strong>Location:</strong> {{ emp_detail.Location }}</li>
                 <li class="list-group-item"><strong>Phone Number:</strong> {{ emp_detail.Phone_No }}</li>
                 <li class="list-group-item"><strong>Date Of Joining:</strong> {{ emp_detail.Date_Of_Joining }}</li>
+                <li class="list-group-item"><strong>Permissions:</strong> {{i}}</li>
+                {% for i in emp_detail.permission.all %}
+                <ul>
+                    <li>{{i}}</li>
+                </ul>
+                  
+                {% endfor %}
+                
+
+               
+
             </ul>
         </div>
     </div>
